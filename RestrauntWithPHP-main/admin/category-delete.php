@@ -1,5 +1,9 @@
 <?php global $conn;
+session_start();
 include ('../connector.php');
+include ('../functions.php');
+
+$user_data = checkLogin($conn);
 
 if(isset($_GET["id"])) {
 

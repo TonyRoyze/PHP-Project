@@ -5,14 +5,14 @@ include ('../functions.php');
 
 $user_data = checkLogin($conn);
 
-if(isset($_GET["username"])) {
+if(isset($_GET["id"])) {
 
-    $username = $_GET["username"];
+    $id = $_GET["id"];
 
     $sql = /** @lang text */
-        "DELETE FROM auth WHERE Username = '$username'";
+        "DELETE FROM reservations WHERE ID = $id";
     $conn->query($sql);
 
-    header("location: /admin/user-dashboard.php");
+    header("location: /admin/reservation-dashboard.php");
     exit;
 }

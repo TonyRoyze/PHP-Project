@@ -2,7 +2,6 @@
 session_start();
 include ('../connector.php');
 include ('../functions.php');
-
 $user_data = checkLogin($conn);
 ?>
 <!DOCTYPE html>
@@ -34,7 +33,7 @@ $user_data = checkLogin($conn);
 <div class="dashboard">
 
     <div class="table-name">
-        <h1>Product Details</h1>
+        <h1>Reservations</h1>
         <a class="btn-add" href="product-create.php" role="button">
             <ion-icon name="add-circle-outline"></ion-icon>
         </a>
@@ -42,11 +41,11 @@ $user_data = checkLogin($conn);
     <table class="table">
         <thead>
         <tr>
-            <th class="title">Title</th>
-            <th class="desc">Description</th>
-            <th>Price</th>
-            <th>Featured</th>
-            <th>Active</th>
+            <th>First Name</th>
+            <th>Guests</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Comments</th>
             <th>
                 <a class='btn-actions'><ion-icon name="ellipsis-vertical-outline"></ion-icon></a>
             </th>
@@ -55,7 +54,7 @@ $user_data = checkLogin($conn);
         <tbody>
         <?php
         $sql = /** @lang text */
-            "SELECT * FROM food";
+            "SELECT * FROM reservations";
         $result = $conn->query($sql);
 
         if (!$result) {
@@ -65,14 +64,14 @@ $user_data = checkLogin($conn);
         while ($row = $result->fetch_assoc()) {
             echo "
                 <tr>
-                    <td class='title'>$row[Title]</td>
-                    <td class='desc'>$row[Description]</td>
-                    <td>$row[Price]</td>
-                    <td>$row[Featured]</td>
-                    <td>$row[Active]</td>
+                    <td>$row[First_Name]</td>
+                    <td>$row[Guests]</td>
+                    <td>$row[Date]</td>
+                    <td>$row[Time]</td>
+                    <td>$row[Comments]</td>
                     <td>
-                        <a class='btn-edit' href='product-edit.php?id=$row[ID]' role='button'><ion-icon name='create-outline'></ion-icon></a>
-                        <a class='btn-delete' href='product-delete.php?id=$row[ID]' role='button'><ion-icon name='trash-outline'></ion-icon></a>
+                        <a class='btn-edit' href='reservation-edit.php?id=$row[ID]' role='button'><ion-icon name='create-outline'></ion-icon></a>
+                        <a class='btn-delete' href='reservation-delete.php?id=$row[ID]' role='button'><ion-icon name='trash-outline'></ion-icon></a>
                     </td>
                 </tr>
                 ";

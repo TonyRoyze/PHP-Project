@@ -1,5 +1,9 @@
 <?php global $conn;
+session_start();
 include ('../connector.php');
+include ('../functions.php');
+
+$user_data = checkLogin($conn);
 
 $username = "";
 $name = "";
@@ -66,40 +70,16 @@ else {
     } while (false);
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signature Cuisine</title>
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="../styles/create.css">
-    <link rel="stylesheet" href="../styles/homepage.css">
 
-
-</head>
-
-
-<body>
-<header>
-    <h2 class="logo">Signature Cuisine</h2>
-    <nav class="navigation">
-        <a href="user-dashboard.php">Users</a>
-        <a href="category-dashboard.php">Categories</a>
-        <a href="product-dashboard.php">Products</a>
-        <button class="btnLogin-popup">Logout</button>
-    </nav>
-
-</header>
 <?php
+include ('./admin-header.php');
 echo "
-    <div class='wrapper user'>
+    <div class='wrapper medium'>
         <div class='form-box'>
             <h2>Edit User</h2>
             <form method='post'>
                 <input type='hidden' name='username' value='$username'>
-                <div class='form-container user'>
+                <div class='form-container medium'>
                     <div class='input-box'>
                         <input type='text' name='name' value='$name' required>
                         <label>Username</label>

@@ -1,5 +1,10 @@
 <?php global $conn;
-include ('../connector.php'); ?>
+session_start();
+include ('../connector.php');
+include ('../functions.php');
+
+$user_data = checkLogin($conn);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +12,7 @@ include ('../connector.php'); ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signature Cuisine</title>
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/product-dashboard.css">
     <link rel="stylesheet" href="../styles/homepage.css">
 
@@ -18,10 +23,11 @@ include ('../connector.php'); ?>
 <header>
     <h2 class="logo">Signature Cuisine</h2>
     <nav class="navigation">
-        <a href="user-dashboard.php">Users</a>
-        <a href="category-dashboard.php">Categories</a>
-        <a href="product-dashboard.php">Products</a>
-        <button class="btnLogin-popup">Logout</button>
+        <a class="link" href="user-dashboard.php">Users</a>
+        <a class="link" href="reservation-dashboard.php">Reservations</a>
+        <a class="link" href="category-dashboard.php">Categories</a>
+        <a class="link" href="product-dashboard.php">Products</a>
+        <a class="btnLogout" href="../logout.php">Logout</a>
     </nav>
 
 </header>
