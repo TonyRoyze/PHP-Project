@@ -1,0 +1,56 @@
+.dashboard {
+    position: relative;
+    background: #522523;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    transition: height .2s ease;
+    width: 1100px;
+    height: 700px;
+    margin-top: 80px;
+    flex-direction: column;
+    align-items: normal;
+    justify-content: normal;
+    overflow: scroll;
+}
+
+.dashboard .table-name{
+    background: #522523;
+    position: sticky;
+    top: 0;
+    height: 70px;
+    padding: 30px 30px 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+table,
+td,
+th {
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: center;
+}
+
+thead {
+    background: #522523;
+    position: sticky;
+    top: 70px;
+}
+
+td.desc {
+    text-align: left;
+}
+
+.btn-add {
+    background: #522523;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.btn-actions {
+    background: #522523;
+}
