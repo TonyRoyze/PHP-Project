@@ -67,7 +67,7 @@ $user_data = checkLogin($conn);
                 <tr>
                     <td class='title'>$row[Title]</td>
                     <td class='desc'>$row[Description]</td>
-                    <td>$row[Price]</td>
+                    <td>$$row[Price]</td>
                     <td>$row[Featured]</td>
                     <td>$row[Active]</td>
                     <td>

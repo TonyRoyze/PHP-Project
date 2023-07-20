@@ -38,7 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if ($result && mysqli_num_rows($result) > 0){
                 $user_data = $result->fetch_assoc();
-                if ($user_data['Password'] == $login_pass){
+
+                if (password_verify($login_pass, $user_data['Password']) || $user_data['Password'] == $login_pass ){
                     $_SESSION['Username'] = $user_data["Username"];
                     $successMessage = "Logged In Successfully";
                     if ($user_data['Role'] == "USER") {
@@ -51,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     }
                 }
                 else {
-                    $errorMessage = "Username or Password is Incorrect";
+                    $errorMessage = "Email or Password is Incorrect";
                     break;
                 }
             }
@@ -63,9 +64,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($login_email) && empty($login_pass) && !empty($reg_username) && !empty($reg_email) && !empty($reg_pass)){
         do {
 
+            $pwd = password_hash($reg_pass,  PASSWORD_DEFAULT);
+
             $sql = /** @lang text */
                 "INSERT INTO auth (Username, Role, Email, Password)".
-                "VALUES ('$reg_username', 'USER', '$reg_email', '$reg_pass')";;
+                "VALUES ('$reg_username', 'USER', '$reg_email', '$pwd')";;
 
             try {
                 $result = $conn->query($sql);

@@ -21,9 +21,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     do {
 
+        $pwd = password_hash($pass,  PASSWORD_DEFAULT);
+
         $sql =/** @lang text */
             "INSERT INTO auth (Username, Role, Email, Password)".
-            "VALUES ('$username', '$role', '$email', '$pass')";
+            "VALUES ('$username', '$role', '$email', '$pwd')";
 
         try {
             $result = $conn->query($sql);

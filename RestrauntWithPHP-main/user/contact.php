@@ -26,7 +26,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sql = /** @lang text */
             "INSERT INTO inquiries (First_Name, Email, Phone_No, Subject, Message)".
             "VALUES ('$firstName', '$email', '$phone', '$subject', '$message')";
-        $result = $conn->query($sql);
         try {
             $result = $conn->query($sql);
         }

@@ -63,12 +63,13 @@ $user_data = checkLogin($conn);
         }
 
         while ($row = $result->fetch_assoc()) {
+            $pass = substr($row["Password"], 0, 8).'...';
             echo "
                 <tr>
                     <td>$row[Username]</td>
                     <td>$row[Role]</td>
                     <td>$row[Email]</td>
-                    <td>$row[Password]</td>
+                    <td>$pass</td>
                     <td>
                         <a class='btn-edit' href='user-edit.php?username=$row[Username]' role='button'><ion-icon name='create-outline'></ion-icon></a>
                         <a class='btn-delete' href='user-delete.php?username=$row[Username]' role='button'><ion-icon name='trash-outline'></ion-icon></a>

@@ -83,7 +83,7 @@ header {
     border-radius: 6px;
     cursor: pointer;
     font-size: 1.1em;
-    color: #162938;
+    color: #305975;
     font-weight: 400;
     margin-left: 40px;
     transition: .5s;
@@ -220,7 +220,7 @@ header {
     border-radius: 6px;
     font-size: 1em;
     font-weight: 500;
-    color: #162938 ;
+    color: #305975 ;
 }
 
 a.btn {

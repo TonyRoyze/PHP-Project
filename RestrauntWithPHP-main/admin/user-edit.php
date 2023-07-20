@@ -48,9 +48,11 @@ else {
 
     do {
 
+        $pwd = password_hash($pass,  PASSWORD_DEFAULT);
+
         $sql = /** @lang text */
             "UPDATE auth ".
-            "SET Username = '$name', Role = '$role', Email = '$email', Password = '$pass'".
+            "SET Username = '$name', Role = '$role', Email = '$email', Password = '$pwd'".
             "WHERE Username = '$username'";
         $result = $conn->query($sql);
 
@@ -65,7 +67,7 @@ else {
 
         $successMessage = "User Updated Successfully";
 
-        header("location: /admin/product-dashboard.php");
+        header("location: /admin/user-dashboard.php");
         exit;
     } while (false);
 }
@@ -93,7 +95,7 @@ echo "
                         <label>Email</label>
                     </div>
                     <div class='input-box'>
-                        <input type='password' name='pass' value='$pass' required>
+                        <input type='text' name='pass' value='$pass' required>
                         <label>Password</label>
                     </div>
                 </div>
