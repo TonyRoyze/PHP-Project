@@ -1,5 +1,9 @@
 # PastryPlaza
 
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=flat&logo=php&logoColor=white)](https://www.php.net)
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=flat&logo=github&logoColor=white)](https://github.com/TonyRoyze/phactory)
+
 ## Overview
 
 PastryPlaza is a lightweight PHP web application for managing a bakery's inventory and sales. It enables users to view available pastries, add new items, and manage bakery data through a simple, intuitive interface.

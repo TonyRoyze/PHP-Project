@@ -1,5 +1,9 @@
 # Community Bulletin & Forum
 
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=flat&logo=php&logoColor=white)](https://www.php.net)
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=flat&logo=github&logoColor=white)](https://github.com/TonyRoyze/phactory)
+
 ## Overview
 
 Community Bulletin & Forum is a PHP-based platform for community interaction and information sharing. It allows community members to create bulletin posts, start forum discussions, and engage in conversations across different categories.

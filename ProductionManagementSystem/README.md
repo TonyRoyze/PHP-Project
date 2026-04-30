@@ -1,5 +1,9 @@
 # ProductionManagementSystem
 
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=flat&logo=php&logoColor=white)](https://www.php.net)
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=flat&logo=github&logoColor=white)](https://github.com/TonyRoyze/phactory)
+
 ## Overview
 
 ProductionManagementSystem is a PHP-based web application designed to help manage and track production inventory, processes, and sales for manufacturing or production-oriented businesses. It provides an intuitive interface for monitoring products, managing production records, and streamlining workflow.

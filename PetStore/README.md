@@ -1,5 +1,9 @@
 # PetStore
 
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=flat&logo=php&logoColor=white)](https://www.php.net)
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=flat&logo=github&logoColor=white)](https://github.com/TonyRoyze/phactory)
+
 ## Overview
 
 PetStore is a simple PHP-based web application for managing pet store inventory and sales. It allows users to view available pets, add new pets, and manage store data through a user-friendly interface.
