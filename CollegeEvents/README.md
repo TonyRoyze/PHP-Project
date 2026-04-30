@@ -1,5 +1,9 @@
 # College Events Management System
 
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=flat&logo=php&logoColor=white)](https://www.php.net)
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=flat&logo=github&logoColor=white)](https://github.com/TonyRoyze/phactory)
+
 ## Overview
 
 College Events Management System is a PHP-based platform for managing college events. It allows users to create, view, and RSVP to events. It also includes a commenting system for each event.
